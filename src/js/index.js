@@ -344,7 +344,11 @@
             return;
         }
         // Get the derivation path
-        var derivationPath = getDerivationPath();
+        var derivationPath = getDerivationPath().replace('44', '48');
+
+        console.log(123, derivationPath)
+
+
         var errorText = findDerivationPathErrors(derivationPath);
         if (errorText) {
             showValidationError(errorText);
